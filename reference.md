@@ -1,39 +1,79 @@
-# Design 
+# Design Reference
 
-## UI 
+## UI
 
-登录底部 常用 社交号形式 icon + 名字 保证精简
-icon + 名字 全局大小统一
-目录搭配 icon 高亮选中
-布局 视线 古登堡原则 z-pattern
-删除 No Yes => No, Keep It. Yes, Delete!
-No / Save button 选用不同 size type (first second with color)
-Validate Deletion Delete / Save => Are you sure? Yes, delete it forever! 
-首页存在 CTA (call to action) button 方便用户浏览
-Bold Title line-height 140%  
-Medium Subtitle left-aligned 降低颜色对比度 opacity 80% 固定 scale 80% 
-Outer Radius = 2 * Inner Radius
-Landing page 空内容用模板提示
-Form 提前告知用户 不要让用户去猜
-Avatar 统一风格 subtle border 和 same color as the background
-Brand color only highlight the most important element 调色 tints & shades
-有时 button 比 link 好
-Media 人物视线诱导用户注意力
-通过露出一点点，暗示用户 scroll
-强调推荐例如支付
-paragraph limit 500 px - 700 px 或者一行字数 CSS use "ch" unit
-Make card clickable 
-Input 使用 预定义值 + 占位符
-Pick the correct element (购物选 - + 1 个符合直觉)
-增加层次感   type size line-height contrast 
-Tooltips Desktop hover 提示 Mobile 点击 "i" 说明
-选择合适可视化图反映数据
-非圆形右侧 double padding 上右下左 20 40 20 20
-展示 shortcut 节约用户心智
-避免怀疑 Record Voice - We won't post it yet
-使用空白分割元素
+### 1. 导航与信息架构
+- 登录区底部常用社交账号采用 `icon + 名称`，保持精简。
+- 全局 `icon + 名称` 组合尺寸统一。
+- 目录项可配 icon，并提供清晰的选中高亮状态。
+- 布局遵循 Gutenberg 原则和 Z-pattern，优先满足自然视线流。
+
+### 2. 排版与层次
+- 主标题使用 Bold，建议 `line-height: 140%`。
+- 副标题建议左对齐，并降低对比度（如 `opacity: 80%`）。
+- 通过字体大小、行高、对比度建立层次。
+- 段落宽度控制在 `500px - 700px`，或使用 CSS `ch` 限制每行字数。
+- 使用留白分隔模块，避免信息拥挤。
+
+### 3. 按钮与关键操作
+- 首页必须有明确 CTA（Call to Action）按钮，降低浏览决策成本。
+- 在关键场景中，按钮通常优于文本链接。
+- `No / Save` 等并列操作使用不同 size/type 区分主次。
+- 危险操作文案明确：`No, keep it` 与 `Yes, delete`。
+- 删除前增加二次确认：`Are you sure? Yes, delete it forever.`
+
+### 4. 表单与输入
+- 表单提前告知规则，不让用户猜。
+- Input 优先使用预定义值 + 占位符。
+- 选择正确控件匹配用户心智（如购物场景 `- / + / 数量`）。
+
+### 5. 组件与视觉规范
+- 圆角系统遵循：`Outer Radius = 2 * Inner Radius`。
+- Avatar 风格统一，使用 subtle border，颜色与背景同体系。
+- 品牌色只高亮最重要元素，其他层级使用 tints/shades。
+- 卡片在可点击场景下支持整卡点击（Make card clickable）。
+- 非圆形块体可使用右侧双倍内边距（如 `20 40 20 20`）。
+
+### 6. 引导与反馈
+- 利用人物视线引导注意力到目标区域。
+- 通过“露出一点内容”暗示可继续滚动。
+- 对重点推荐内容（如支付）做视觉强调。
+- Desktop 使用 hover tooltip；Mobile 使用点击 `i` 查看说明。
+- 提供 shortcut，节约用户心智。
+- 敏感操作增加信任提示（如录音后提示 `We won't post it yet`）。
+
+### 7. 空状态与数据表达
+- Landing page 空内容使用模板提示下一步。
+- 选择最合适的数据可视化方式表达信息，不为图而图。
 
 ## UX
 
+### 1. 价值表达与说服力
+- 用具体数据表达价值（如 `Save $80 per month`）。
+- 使用真实数字提升可信度（如 `1178` 优于 `1000`）。
+- 通过产品截图直接展示产品价值。
+- 使用 before/after visuals 强化感知收益。
 
+### 2. 转化设计
+- Landing page 的 CTA 以转化为目标设计路径。
+- Signup 页面引入 social proof（人脸、用户评论）。
+- 定价页使用 icon 增强可读性与生动性。
+- 对核心价值可采用渐进解锁（如模糊关键内容，引导升级/注册）。
 
+### 3. 个性化与分层体验
+- 基于用户位置等信息做个性化内容展示。
+- 区分新用户与老用户路径（New visitor vs returning user）。
+
+### 4. 信任与阻力管理
+- 用样式暗示行为风险（如 danger zone 使用 red）。
+- 解释权限请求原因（如受 API 限制必须授权）。
+- 降低迁移成本，减少切换阻力。
+
+### 5. 体验增强与品牌记忆
+- 展示真实交互（interactive feature picker），减少抽象描述。
+- 可使用品牌吉祥物替代部分传统通知。
+- 适度加入彩蛋与幽默感，让产品更难忘。
+- 可借鉴经典软件布局，但在细节上体现新意。
+
+### 6. 体验评估
+- 结合用户行为分析（热力图、鼠标停留时间）持续优化。
